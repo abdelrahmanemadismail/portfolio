@@ -52,6 +52,9 @@ INSTALLED_APPS = [
 
     # custom apps
     'projects.apps.ProjectsConfig',
+
+    # third-party apps
+    'markdownify',
 ]
 
 MIDDLEWARE = [
@@ -148,3 +151,11 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# Markdownify settings
+MARKDOWNIFY = {
+    "default": {
+        "WHITELIST_TAGS": ["a", "abbr", "acronym", "b", "blockquote", "code", "em", "i", "li", "ol", "p", "strong", "ul", "h1", "h2", "h3", "h4", "h5", "h6", "img"],
+    }
+}

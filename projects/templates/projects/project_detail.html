@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load markdownify %}
+
+{% block content %}
+<!-- START PROJECT DETAILS -->
+<section id="project-details" class="section_padding">
+  <div class="container">
+    <div class="row">
+      <!-- Project Image -->
+      <div class="col-md-8 col-sm-12">
+        <div class="project_image">
+          <img src="{{ project.image.url }}" class="img-responsive" alt="{{ project.title }}">
+        </div>
+      </div>
+
+      <!-- Project Information -->
+      <div class="col-md-4 col-sm-12">
+        <div class="project_info">
+          <h2 class="text_white">{{ project.title }}</h2>
+          <p><strong>Date Created:</strong> {{ project.created_at|date:"F d, Y" }}</p>
+
+          <p><strong>Description:</strong> {{ project.description }}</p>
+
+          <!-- Technologies Used -->
+          <p><strong>Technologies Used:</strong></p>
+          <ul>
+            {% for tech in project.technologies.all %}
+              <li>
+                <img src="{{ tech.icon.url }}" alt="{{ tech.name }}" style="width: 30px; height: 30px; border-radius: 50%;">
+                {{ tech.name }}
+              </li>
+            {% endfor %}
+          </ul>
+
+          <!-- Buttons for GitHub and Live Demo -->
+          <div class="project_buttons" style="padding-top:20px">
+            {% if project.github_link %}
+              <a href="{{ project.github_link }}" target="_blank" class="btn btn-warning">
+               View on GitHub
+              </a>
+            {% endif %}
+
+            {% if project.live_demo_link %}
+              <a href="{{ project.live_demo_link }}" target="_blank" class="btn btn-danger">
+                Preview
+              </a>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional Additional Details -->
+     {% if project.long_description %}
+    <div class="row">
+      <div class="col-md-12">
+        <div class="project_details">
+          <h3 class="text_white ">More About This Project</h3>
+          <p>{{ project.long_description|markdownify }}</p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Back to Projects Button -->
+    <div class="row">
+      <div class="col-md-12 text-center p-50" style="padding:10px">
+        <a href="{% url 'project_list' %}" class="link-danger">Back to Projects</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END PROJECT DETAILS -->
+{% endblock %}

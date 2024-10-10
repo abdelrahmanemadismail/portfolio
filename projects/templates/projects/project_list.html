@@ -17,7 +17,7 @@
         <ul>
           <li class="active" data-filter="*">All</li>
           {% for tech in technologies %}
-            <li data-filter=".{{ tech.name }}">{{ tech.name }}</li>
+            <li data-filter=".{{ tech.slug }}">{{ tech.name }}</li>
           {% endfor %}
         </ul>
       </div>

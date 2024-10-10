@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView, DetailView
 from .models import Project, Technology
 
 # List view for all projects
@@ -26,10 +26,3 @@ class ProjectDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         context['technologies'] = Technology.objects.all()  # Add all technologies to context
         return context
-
-
-# Delete view for removing a project
-class ProjectDeleteView(DeleteView):
-    model = Project
-    template_name = 'projects/project_confirm_delete.html'
-    success_url = reverse_lazy('project_list')  # redirect to project list after deleting the project
