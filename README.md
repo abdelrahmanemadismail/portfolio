@@ -31,8 +31,8 @@ To run this project locally, you will need:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio-project.git
-   cd portfolio-project
+   git clone https://github.com/abdelrahmanemadismail/portfolio
+   cd portfolio
    ```
 
 2. Create a virtual environment and activate it:

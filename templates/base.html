@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zxx">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <!-- SITE TITLE -->
+    <title>{% block title %}Abdelrahman Ismail{% endblock %}</title>
+
+    <!-- Load static files -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300i,400,400i,500,600,700,800" rel="stylesheet">
+    <link href="{% static 'fonts/font-awesome.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'images/favicon.jpg' %}" rel="icon"/>
+    <link href="{% static 'fonts/themify-icons.css' %}" rel="stylesheet"/>
+    <link href="{% static 'fonts/etline.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/lightbox.min.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet"/>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+
+    {% block extra_head %}
+    <!-- Additional head elements can go here -->
+    {% endblock %}
+</head>
+
+<body data-spy="scroll" data-offset="80">
+
+    <!-- START PRELOADER -->
+    <div class="preloader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
+    <!-- END PRELOADER -->
+
+    <!-- START NAVBAR -->
+    <header class="header_area">
+        <div class="main_header navbar navbar-default menu-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2 col-sm-2 col-xs-4">
+                        <div class="logo">
+                            <a href="{% url 'home' %}" class="navbar-brand"><p>Abdelrahman</p></a>
+                            <div class="mobile-nav"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-10 col-sm-10 col-xs-8">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="fa fa-navicon"></span>
+                            </button>
+                        </div>
+
+                        <nav id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#service">Service</a></li>
+                                <li><a href="#resume">Resume</a></li>
+                                <li><a href="#portfolio">Portfolio</a></li>
+                                <li><a href="#blog">Blog</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div><!--- END CONTAINER -->
+        </div>
+    </header>
+    <!-- END NAVBAR -->
+
+    <!-- START MAIN CONTENT -->
+    {% block content %}
+    <!-- Content to be extended by other templates -->
+    {% endblock %}
+    <!-- END MAIN CONTENT -->
+
+    <!-- START FOOTER -->
+    <div class="footer">
+        <div class="container">
+            <div class="copy-text text-center">
+                <p>Copyright © 2024 Abdelrahman Ismail | All Rights Reserved</p>
+            </div>
+        </div>
+    </div>
+    <!-- END FOOTER -->
+
+    <!-- Load static JS files -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/modernizr-2.8.3.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nav.js' %}"></script>
+    <script src="{% static 'js/jquery.inview.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/animated-headline.js' %}"></script>
+    <script src="{% static 'js/particles.min.js' %}"></script>
+    <script src="{% static 'js/app.js' %}"></script>
+    <script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'js/lightbox.min.js' %}"></script>
+    <script src="{% static 'js/scrolltopcontrol.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+    {% block extra_js %}
+    <!-- Additional JS scripts -->
+    {% endblock %}
+</body>
+</html>
