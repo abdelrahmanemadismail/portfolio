@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- START PORTFOLIO -->
+<section id="portfolio" class="dark_bg section_padding">
+  <div class="container">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="section_heading text-center">
+        <h2>My <span>Projects</span></h2>
+        <p>Welcome to my portfolio! Explore my projects that showcase my skills in design and development.<br>Each project reflects my commitment to quality and innovative solutions. Let's bring your ideas to life!</p>        <div class="sm_border"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Dynamic Work Filter -->
+      <div class="work_filter text-center">
+        <ul>
+          <li class="active" data-filter="*">All</li>
+          {% for tech in technologies %}
+            <li data-filter=".{{ tech.name }}">{{ tech.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="work_content_area">
+          {% for project in projects %}
+          <div class="col-md-4 col-sm-6 col-xs-12 element-item {{ project.technologies.all|join:" " }}">
+            <div class="single_blog wow fadeInUp">
+              <div class="blog-thumb">
+                <div class="blog-image">
+                  <a href="{% url 'project_detail' project.pk %}">
+                    <img src="{{ project.image.url }}" class="img-responsive" alt="{{ project.title }}">
+                  </a>
+                </div>
+                <div class="blog-info">
+                {% for tech in project.technologies.all %}
+                  <small>
+                    <img src="{{ tech.icon.url }}" alt="{{ tech.name }}" style="width: 30px; height: 30px; border-radius: 50%;">
+                  </small>
+                {% endfor %}
+                  <a href="{% url 'project_detail' project.pk %}"><h4>{{ project.title }}</h4></a>
+                  <p>{{ project.description|truncatewords:15 }}</p>
+                  <a href="{% url 'project_detail' project.pk %}" class="btn blog_btn">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END PORTFOLIO -->
+{% endblock %}
