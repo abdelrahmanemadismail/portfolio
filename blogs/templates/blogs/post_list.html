@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- START BLOG POSTS -->
+<section id="blog" class="dark_bg section_padding">
+  <div class="container">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="section_heading text-center">
+        <h2>My <span>Blog</span></h2>
+        <p>Explore my latest blog posts! I share insights, experiences, and tips on various topics.<br>Stay updated with my thoughts and work.</p>
+        <div class="sm_border"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Dynamic Category Filter -->
+      <div class="work_filter text-center">
+        <ul>
+          <li class="active" data-filter="*">All</li>
+          {% for category in categories %}
+            <li data-filter=".{{ category.slug }}">{{ category.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Blog Posts Section -->
+      <div class="work_content_area">
+          {% for post in posts %}
+          <div class="col-md-4 col-sm-6 col-xs-12 element-item {{ post.category.slug }} {{ post.tags.all|join:" " }}">
+            <div class="single_blog wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+              <div class="blog-thumb">
+                <div class="blog-image">
+                  <a href="{{ post.get_absolute_url }}">
+                    <img src="{{ post.image.url }}" class="img-responsive" alt="{{ post.title }}">
+                  </a>
+                </div>
+                <div class="blog-info">
+                  <small><i class="fa fa-clock-o"></i>{{ post.published_date|date:"F d, Y" }}</small>
+                  <span>| {{ post.category.name }}</span>
+                  <a href="{{ post.get_absolute_url }}">
+                    <h4>{{ post.title }}</h4>
+                  </a>
+                  <p>{{ post.description|truncatewords:20 }}</p>
+
+                  <!-- Tags Section -->
+                  <div class="tags">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap;">
+                      {% for tag in post.tags.all %}
+                      <li style="margin-right: 10px;">
+                          <a href="{% url 'tag_post_list' tag.slug %}" style="text-decoration: none; color: #d00;">#{{ tag.name }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END BLOG POSTS -->
+{% endblock %}
