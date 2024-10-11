@@ -15,6 +15,17 @@ class Category(models.Model):
         self.slug = slugify(self.name)
         super().save(*args, **kwargs)
 
+class Tag(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+    slug = models.SlugField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.slug
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
+
 class Post(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -24,7 +35,8 @@ class Post(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
     published_date = models.DateTimeField(blank=True, null=True)
-    categories = models.ManyToManyField(Category, related_name='posts')
+    tags = models.ManyToManyField(Tag, related_name='posts')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     def publish(self):
         self.published_date = timezone.now()
