@@ -23,11 +23,11 @@ class Post(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(default=timezone.now)
     updated_at = models.DateTimeField(auto_now=True)
-    published = models.BooleanField(default=False)
+    published_date = models.DateTimeField(blank=True, null=True)
     categories = models.ManyToManyField(Category, related_name='posts')
 
     def publish(self):
-        self.published = True
+        self.published_date = timezone.now()
         self.save()
 
     def __str__(self):
