@@ -44,7 +44,7 @@
           <div class="row">
             <div class="col-md-2 col-sm-2 col-xs-4">
               <div class="logo">
-                <a href="index.html" class="navbar-brand"><p>Abdelrahman</p></a>
+                <a href="{% url 'home' %}" class="navbar-brand"><p>Abdelrahman</p></a>
                 <div class="mobile-nav"></div>
               </div>
             </div>
@@ -58,13 +58,13 @@
 
               <nav id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#home">Home</a></li>
-                  <li><a href="#about">About</a></li>
-                  <li><a href="#service">Service</a></li>
-                  <li><a href="#resume">Resume</a></li>
-                  <li><a href="#portfolio">Portfolio</a></li>
-                  <li><a href="#blog">Blog</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'home' %}#about">About</a></li>
+                  <li><a href="{% url 'home' %}#service">Service</a></li>
+                  <li><a href="{% url 'home' %}#resume">Resume</a></li>
+                  <li><a href="{% url 'project_list' %}">Portfolio</a></li>
+                  <li><a href="{% url 'post_list' %}">Blog</a></li>
+                  <li><a href="{% url 'home' %}#contact">Contact</a></li>
                 </ul>
               </nav>
             </div>
@@ -75,12 +75,9 @@
   <!-- END NAVBAR -->
     <!-- <div class="dark_bg" style="padding-top:80px;"></div> -->
     <!-- START MAIN CONTENT -->
-     <div class="main_content dark_bg section_padding">
-        <div class="container">
             {% block content %}
             <!-- Content goes here -->
             {% endblock %}
-        </div>
     </div>
     <!-- END MAIN CONTENT -->
 

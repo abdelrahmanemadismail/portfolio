@@ -3,8 +3,9 @@
 
 {% block content %}
 <!-- START POST DETAILS -->
-<section id="post-details" class="section_padding">
-  <div class="container">
+
+<section id="post-details" class="dark_bg section_padding">
+  <div class="container dark_bg">
     <div class="row">
       <!-- Post Image -->
       <div class="col-md-8 col-sm-12">
@@ -47,13 +48,15 @@
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- END POST DETAILS -->
-<!-- Back to Blog List Button -->
+
+    <!-- Back to Blog List Button -->
 <div class="post_buttons" style="padding-top:20px">
   <a href="{% url 'post_list' %}" style="text-decoration: none; color: #d00;">
     Back to Blogs
   </a>
 </div>
+  </div>
+</section>
+<!-- END POST DETAILS -->
+
 {% endblock %}

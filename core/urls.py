@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('project/', include('projects.urls')),
     path('blog/', include('blogs.urls')),
+    path('', include('pages.urls')),
 ]
 
 # During development, serve static and media files through Django

@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     # custom apps
     'projects.apps.ProjectsConfig',
     'blogs.apps.BlogsConfig',
+    'pages.apps.PagesConfig',
 
     # third-party apps
     'markdownify',

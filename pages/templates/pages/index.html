@@ -1,0 +1,419 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- START BANNER DESIGN -->
+<section id="home" class="main_banner banner_bg">
+  <div id="particles-js"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-xs-12">
+        <div class="banner_content">
+          <h1 class="cd-headline clip">
+            <span class="fw_600">I Am</span>
+            <span class="cd-words-wrapper">
+              <b class="is-visible fw_300">Abdelrahman Ismail</b>
+              <b class="fw_300">Web Designer</b>
+              <b class="fw_300">Web Developer</b>
+            </span>
+          </h1>
+          <a href="{% url 'project_list' %}" class="banner_btn">View Work</a>
+          <a href="{% url 'home' %}#contact" class="banner_btn js-scroll">Hire Me</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- END BANNER DESIGN -->
+
+<!-- START ABOUT -->
+<section id="about" class="dark_bg section_padding">
+  <div class="container">
+    <div class="col-md-12 col-sm-12-col-xs-12">
+      <div class="section_heading text-center">
+        <h2>About <span>Myself</span></h2>
+        <p>I’m a web developer creating responsive, visually appealing websites. <br> My designs focus on user-friendly,
+          efficient experiences.</p>
+        <div class="sm_border"></div>
+      </div>
+    </div>
+
+    <div class="single_about">
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="about_image wow animated fadeInLeft">
+            <img src="{% static 'images/about.png' %}" alt="about-image" />
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <div class="about_content_area wow animated fadeInRight">
+            <h4>Hello, I am <span>Abdelrahman</span> Ismail</h4>
+            <p>I am a passionate web developer experienced in multiple technologies including HTML, CSS, JavaScript,
+              Django, and Bootstrap. I have built responsive websites using modern frameworks, optimized site
+              performance, and managed hosting on AWS. My expertise includes both frontend and backend development, and
+              I have also taught Python and Flutter to over 50 students. My goal is to deliver well-crafted, efficient,
+              and scalable solutions.</p>
+            <div class="about_details">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="ct_about">
+                    <span>Name</span> : Abdelrahman Emad Mahmoud Ali Ismail
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="ct_about">
+                    <span>Age</span> : 26
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="ct_about">
+                    <span>Address</span> : Sharqia, Egypt
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="ct_about">
+                    <span>Phone Number</span> : +201025580308
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="ct_about">
+                    <span>Email</span> : abdelrahman.e.ismail@gmail.com
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <a href="{% static 'Abdelrahman Ismail l Resume.pdf' %}" class="btn btn-default main_btn">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- END ABOUT -->
+<!-- START SERVICE -->
+<section id="service" class="dark_bg section_padding">
+  <div class="container">
+    <div class="col-md-12 col-sm-12-col-xs-12">
+      <div class="section_heading text-center">
+        <h2>My <span>Services</span></h2>
+        <p>I offer a wide range of web development and design services to meet your business needs.</p>
+        <div class="sm_border"></div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service wow fadeInDown" data-wow-delay="0.3s">
+          <i class="fa fa-solid fa-globe"></i>
+          <h4>Web Development</h4>
+          <p>Specializing in responsive, scalable web applications using technologies like Django, HTML, CSS, and
+            JavaScript.</p>
+        </div>
+      </div> <!-- End Col -->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service wow fadeInDown" data-wow-delay="0.3s">
+          <i class="fa fa-paint-brush"></i>
+          <h4>Web Design</h4>
+          <p>Creating visually appealing and user-friendly designs that enhance user experience and brand identity.</p>
+        </div>
+      </div> <!-- End Col -->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service wow fadeInDown" data-wow-delay="0.3s">
+          <i class="fa fa-database"></i>
+          <h4>Database Management</h4>
+          <p>Expertise in PostgreSQL, MySQL, and database optimization to ensure your data is efficiently structured and
+            secure.</p>
+        </div>
+      </div> <!-- End Col -->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service wow fadeInUp" data-wow-delay="0.3s">
+          <i class="fa fa-bullhorn"></i>
+          <h4>Digital Marketing</h4>
+          <p>Helping businesses grow their online presence with targeted digital marketing strategies and SEO.</p>
+        </div>
+      </div> <!-- End Col -->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service wow fadeInUp" data-wow-delay="0.3s">
+          <i class="fa fa-cloud"></i>
+          <h4>Cloud Hosting</h4>
+          <p>Managing cloud solutions like AWS or other VPS servers to ensure reliable, scalable, and secure hosting for
+            your applications.</p>
+        </div>
+      </div> <!-- End Col -->
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service wow fadeInUp" data-wow-delay="0.3s">
+          <i class="fa fa-life-ring"></i>
+          <h4>Excellent Support</h4>
+          <p>Providing continuous support to ensure your web projects are running smoothly and efficiently.</p>
+        </div>
+      </div> <!-- End Col -->
+    </div>
+  </div>
+</section>
+<!-- END SERVICE -->
+ <!-- START RESUM -->
+ <section id="resume" class="dark_bg section_padding">
+  <div class="container">
+    <div class="col-md-12 col-sm-12-col-xs-12">
+      <div class="section_heading text-center">
+        <h2>My <span>Resume</span></h2>
+        <p>Software Engineer with over five years of experience in software and web development,<br>holding a Bachelor's degree in Computer Science from El Shorouk Academy.</p>
+        <div class="sm_border"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="resume-container wow fadeInLeft">
+          <div class="row">
+            <h3><i class="fa fa-graduation-cap"></i>Education:</h3>
+            <div class="col-md-12">
+              <div class="single_resume">
+                <strong>2020 - 2024</strong>
+                <h5>Bachelor’s degree in Computer Science</h5>
+                <p>Al Shorouk Academy, Cairo<br>Ranked 6th in First Year</p>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="single_resume">
+                <strong>High School</strong>
+                <h5>Hehia Secondary School for Boys</h5>
+                <p>Sharqia, Egypt</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="resume-container wow fadeInRight">
+          <div class="row">
+            <h3><i class="fa fa-wordpress"></i>Experience:</h3>
+            <div class="col-md-12">
+              <div class="single_resume">
+                <strong>04/2023 - Present</strong>
+                <h5>Backend Developer</h5>
+                <p>Univortal, Cairo<br>Developed a RESTful API using Django and FastAPI for a student management system and AI-driven tools for personalized university recommendations.</p>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="single_resume">
+                <strong>01/2020 - 03/2023</strong>
+                <h5>Software Engineer</h5>
+                <p>Bright Future Education, Cairo<br>Developed and maintained scalable web applications using Django and PostgreSQL, collaborating with teams to implement custom software solutions.</p>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="single_resume">
+                <strong>2022 - 2023</strong>
+                <h5>Head of Technical Team</h5>
+                <p>IEEE El Shorouk Academy Student Branch</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- END RESUM -->
+<!-- START PORTFOLIO -->
+<section id="portfolio" class="dark_bg section_padding">
+  <div class="container">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="section_heading text-center">
+        <h2>My <span>Projects</span></h2>
+        <p>Welcome to my portfolio! Explore my projects that showcase my skills in design and development.<br>Each project reflects my commitment to quality and innovative solutions. Let's bring your ideas to life!</p>        <div class="sm_border"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Dynamic Work Filter -->
+      <div class="work_filter text-center">
+        <ul>
+          <li class="active" data-filter="*">All</li>
+          {% for tech in technologies %}
+            <li data-filter=".{{ tech.slug }}">{{ tech.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Projects Section -->
+      <div class="work_content_area">
+          {% for project in projects %}
+          <div class="col-md-4 col-sm-6 col-xs-12 element-item {{ project.technologies.all|join:" " }}">
+            <div class="single_blog wow fadeInUp">
+              <div class="blog-thumb">
+                <div class="blog-image">
+                  <a href="{% url 'project_detail' project.pk %}">
+                    <img src="{{ project.image.url }}" class="img-responsive" alt="{{ project.title }}">
+                  </a>
+                </div>
+                <div class="blog-info">
+                {% for tech in project.technologies.all %}
+                  <small>
+                    <img src="{{ tech.icon.url }}" alt="{{ tech.name }}" style="width: 30px; height: 30px; border-radius: 50%;">
+                  </small>
+                {% endfor %}
+                  <a href="{% url 'project_detail' project.pk %}"><h4>{{ project.title }}</h4></a>
+                  <p>{{ project.description|truncatewords:15 }}</p>
+                  <a href="{% url 'project_detail' project.pk %}" class="btn blog_btn">View Project</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+    <div class="text-center" style="width:100%; ">
+      <a href="{% url 'project_list' %}" class="banner_btn">More Work</a>
+    </div>
+  </div>
+</section>
+<!-- END PORTFOLIO -->
+
+ <!-- START COUNTER -->
+ <section id="counter_area" class="section_padding">
+  <div class="container">
+    <div class="row text-center">
+
+      <!-- <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="single_counter">
+          <h3><span class="counter">80</span>+</h3>
+            <h5>Successul Projects</h5>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="single_counter">
+          <h3><span class="counter">720</span>K</h3>
+          <h5>Happy Clients</h5>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="single_counter">
+          <h3><span class="counter">90</span>+</h3>
+          <h5>Awards Received</h5>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="single_counter border_left">
+          <h3><span class="counter">820</span>K</h3>
+          <h5>Customer</h5>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END COUNTER -->
+ <!-- START BLOG POSTS -->
+<section id="blog" class="dark_bg section_padding">
+  <div class="container">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <div class="section_heading text-center">
+        <h2>My <span>Blog</span></h2>
+        <p>Explore my latest blog posts! I share insights, experiences, and tips on various topics.<br>Stay updated with my thoughts and work.</p>
+        <div class="sm_border"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Dynamic Category Filter -->
+      <div class="work_filter text-center">
+        <ul>
+          <li class="active" data-filter="*">All</li>
+          {% for category in categories %}
+            <li data-filter=".{{ category.slug }}">{{ category.name }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Blog Posts Section -->
+      <div class="work_content_area">
+          {% for post in posts %}
+          <div class="col-md-4 col-sm-6 col-xs-12 element-item {{ post.category.slug }} {{ post.tags.all|join:" " }}">
+            <div class="single_blog wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+              <div class="blog-thumb">
+                <div class="blog-image">
+                  <a href="{{ post.get_absolute_url }}">
+                    <img src="{{ post.image.url }}" class="img-responsive" alt="{{ post.title }}">
+                  </a>
+                </div>
+                <div class="blog-info">
+                  <small><i class="fa fa-clock-o"></i>{{ post.published_date|date:"F d, Y" }}</small>
+                  <span>| {{ post.category.name }}</span>
+                  <a href="{{ post.get_absolute_url }}">
+                    <h4>{{ post.title }}</h4>
+                  </a>
+                  <p>{{ post.description|truncatewords:20 }}</p>
+
+                  <!-- Tags Section -->
+                  <div class="tags">
+                    <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap;">
+                      {% for tag in post.tags.all %}
+                      <li style="margin-right: 10px;">
+                          <a href="{% url 'tag_post_list' tag.slug %}" style="text-decoration: none; color: #d00;">#{{ tag.name }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="text-center" style="width:100%; ">
+    <a href="{% url 'post_list' %}" class="banner_btn">More Blogs</a>
+  </div>
+</section>
+<!-- END BLOG POSTS -->
+ 		<!-- START CONTACT -->
+     <section id="contact" class="dark_bg section_padding">
+      <div class="container">
+        <div class="col-md-12 col-sm-12-col-xs-12">
+          <div class="section_heading text-center">
+            <h2>Contact <span>Me</span></h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting<br/> industry. Lorem Ipsum standard dummy text.</p>
+            <div class="sm_border"></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <form class="form" name="enq" method="post" action="contact.php" onsubmit="return validation();">
+              <div class="row">
+                <div class="form-group col-md-4">
+                  <input type="text" name="name" class="form-control" placeholder="Name" required="required">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="email" name="email" class="form-control" placeholder="Email" required="required">
+                </div>
+                <div class="form-group col-md-4">
+                  <input type="text" name="subject" class="form-control" placeholder="Subject" required="required">
+                </div>
+                <div class="form-group col-md-12">
+                  <textarea rows="6" name="message" class="form-control" placeholder="Your Message" required="required"></textarea>
+                </div>
+                <div class="col-md-12 text-center">
+                  <button type="submit" value="Send message" name="submit" id="submitButton" class="btn btn-default main_btn" title="Submit Your Message!">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  <!-- END CONTACT -->
+{% endblock %}
